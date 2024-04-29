@@ -1,16 +1,16 @@
 [{
-  "link": {"text":"home", "url": "index.html"},
-  "pageTitle": "Home Page",
-  "content": "This is the home content"
+  "link": {"text":"dashboard", "url": "index.html"},
+  "pageTitle": "Dashboard Page",
+  "content": "This is the Dashboard content"
 },
 {  
-  "link": {"text":"about", "url": "about.html"},
-  "pageTitle": "bout Page",
+  "link": {"text":"documention", "url": "documentation.html"},
+  "pageTitle": "About Page",
   "content": "This is the about content"
 },
 { 
-  "link": {"text":"database", "url": "index.html"},
-  "pageTitle": "database Page",
-  "content": "This is the database content"
+  "link": {"text":"contact", "url": "contact.html"},
+  "pageTitle": "Contact Page",
+  "content": "This is the contact content"
 }
 ]
