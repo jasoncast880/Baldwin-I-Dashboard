@@ -1,14 +1,16 @@
 <template>
   <navbar
     :pages="pages"
-    :active-page="activePage"
-    :nav-link-click="(index) => activePage = index"
   ></navbar>
 
+  <router-view></router-view>
+
+<!--
   <page-viewer
     v-if="pages.length > 0"
     :page="pages[activePage]"
   ></page-viewer>
+-->
     
 </template>
 
@@ -21,29 +23,11 @@ export default {
   components: {
     Navbar,
     PageViewer
-    //BigScroll
-  },
-  created() {
-    this.getPages();
-  },
-  data() {
-    return {
-      activePage: 0,
-      pages: []
-    }
   },
   methods: {
-    async getPages() {
-      let res = await fetch('pages.json');
-      let data = await res.json();
-
-      this.pages = data;
+      pageCreated(pageObj) {
+        this.pages.push(pageObj);
     },
-    /*
-    pageCreated(pageObj){
-      this.pages.push(pageObj);
-    }
-    */
   }
 }
 </script>

@@ -3,8 +3,8 @@
       :class="[`navbar-dark`, `bg-dark`, 'navbar', 'navbar-expand-lg']"
   >
     <div class="container-fluid">
-      <div style="display:flex; flex-directions:row; margin-top:10px; margin-bottom:10px;">
-        <button style="padding-top: 10px; border-radius:10px;">
+      <div style="display:flex; flex-directions:column; margin-top:10px; margin-bottom:10px;">
+        <button style="padding-top: 10px; margin-right: 10px; border-radius:10px;">
           <i class="bi bi-0-circle"></i>  
           <i class="bi bi-brightness-alt-high"></i>
           <i class="bi bi-0-circle"></i>  
@@ -17,8 +17,7 @@
         <li v-for="(page, index) in pages" class="nav-item" :key="index">
           <navbar-link
               :page="page"
-              :isActive="activePage===index"
-              @click.prevent="navLinkClick(index)"
+              :index="index"
           ></navbar-link>
         </li>
          
@@ -44,7 +43,9 @@ export default {
   components: {
     NavbarLink,
   },
-  props: ['pages', 'activePage', 'navLinkClick'],
+  created(){
+    this.pages = this.$pages.getAllPages();
+  },
   data() {
     return {
     }
