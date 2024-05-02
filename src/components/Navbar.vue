@@ -6,7 +6,7 @@
       <div style="display:flex; flex-directions:column; margin-top:10px; margin-bottom:10px;">
         <button style="padding-top: 10px; margin-right: 10px; border-radius:10px;">
           <i class="bi bi-0-circle"></i>  
-          <i class="bi bi-brightness-alt-high"></i>
+          <i class="bi bi-brightness-alt-high" style="transform: rotate(180deg);"></i>
           <i class="bi bi-0-circle"></i>  
         </button>
         <a class="navbar-brand jacquard-12-charted-regular" >
@@ -14,20 +14,28 @@
         </a>
       </div>
       <ul class="navbar-nav navbar-center d-flex justify-content-center align-items-center mb-2 mb-lg-0 ">
+<!--
         <li v-for="(page, index) in pages" class="nav-item" :key="index">
           <navbar-link
               :page="page"
               :index="index"
           ></navbar-link>
         </li>
-         
+-->
+
+        <navbar-divider icon="graph-up-arrow"/>
+        <router-link to="/dashboard"><nav class="cool-font">DASHBOARD</nav></router-link>
+        <navbar-divider icon="patch-question"> </navbar-divider>
+        <router-link to="/docs"><nav class="cool-font">USER-MANUAL</nav></router-link>
+        <navbar-divider icon="book"/>
+        <router-link to="/docs"><nav class="cool-font">BLOG</nav></router-link>
       </ul>
      
       <div>
-        <button>
+        <button @click="goToLinkedIn"> 
           <i class="bi bi-linkedin"></i>
         </button>
-        <button>
+        <button @click="goToGithub">
           <i class="bi bi-github"></i>
         </button>
       </div>
@@ -38,10 +46,12 @@
 
 <script>
 import NavbarLink from './NavbarLink.vue';
+import NavbarDivider from './NavbarDivider.vue';
 
 export default {
   components: {
     NavbarLink,
+    NavbarDivider,
   },
   created(){
     this.pages = this.$pages.getAllPages();
@@ -51,14 +61,20 @@ export default {
     }
   },
   methods: {
-    
+    goToLinkedIn(){
+      window.open("https://linkedin.com/in/jason-castillanes-057316203");
+    },
+    goToGithub(){
+      window.open("https://github.com/jasoncast880/Baldwin-I-Dashboard");
+    },
   }
 }
 </script>
 
 <style scoped>
+
 .navbar-brand, .navbar-nav .nav-link {
-  font-family: "Jacquard 12 Charted", system-ui;
+  font-family: "Jacquard 24", system-ui;
   font-weight: 400;
   font-style: normal;
   font-size: 2.4rem;
@@ -100,5 +116,15 @@ export default {
   bottom: 0; /* Position below the navbar */
 }
 
+.cool-font {
+  font-family: "Jacquard 12 charted", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.1rem;
+  color: white;
+  
+  margin-left:10px;
+  margin-right:10px;
+}
 </style>
 

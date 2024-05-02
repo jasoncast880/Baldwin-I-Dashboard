@@ -3,16 +3,18 @@
     :pages="pages"
   ></navbar>
 
-  <router-view></router-view>
-
+  <div class="container">
+  <router-view ></router-view>
+  </div>
 <!--
-  <page-viewer
-    v-if="pages.length > 0"
+  <page-viewer>
+    v-if="pages.length > 0";
     :page="pages[activePage]"
-  ></page-viewer>
+  </page-viewer>
 -->
     
 </template>
+
 
 <script>
 import Navbar from './components/Navbar.vue'
@@ -25,12 +27,32 @@ export default {
     PageViewer
   },
   methods: {
-      pageCreated(pageObj) {
-        this.pages.push(pageObj);
+    pageCreated(pageObj) {
+      this.pages.push(pageObj);
     },
-  }
+  },
 }
 </script>
 
 <style>
+.navbar {
+  display: block;
+  position: fixed;
+}
+.container {
+  padding-left: 5px;
+  padding-right:5px;
+
+}
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
 </style>
