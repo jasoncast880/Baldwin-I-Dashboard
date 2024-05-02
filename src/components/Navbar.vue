@@ -4,11 +4,14 @@
   >
     <div class="container-fluid">
       <div style="display:flex; flex-directions:column; margin-top:10px; margin-bottom:10px;">
+        <!--
         <button style="padding-top: 10px; margin-right: 10px; border-radius:10px;">
           <i class="bi bi-0-circle"></i>  
           <i class="bi bi-brightness-alt-high" style="transform: rotate(180deg);"></i>
           <i class="bi bi-0-circle"></i>  
         </button>
+        -->
+        <logo/>
         <a class="navbar-brand jacquard-12-charted-regular" >
           BALDWIN I
         </a>
@@ -23,14 +26,15 @@
         </li>
 -->
 
-        <navbar-divider icon="graph-up-arrow"/>
+        <router-link to="/dashboard"><navbar-divider icon="bi-file-bar-graph"/></router-link>
         <router-link to="/dashboard"><nav class="cool-font">DASHBOARD</nav></router-link>
-        <navbar-divider icon="patch-question"> </navbar-divider>
+        <navbar-divider icon="bi-book"> </navbar-divider>
         <router-link to="/docs"><nav class="cool-font">USER-MANUAL</nav></router-link>
-        <navbar-divider icon="book"/>
+        <navbar-divider icon="bi-pen"/>
         <router-link to="/docs"><nav class="cool-font">BLOG</nav></router-link>
       </ul>
      
+      <!--
       <div>
         <button @click="goToLinkedIn"> 
           <i class="bi bi-linkedin"></i>
@@ -39,17 +43,20 @@
           <i class="bi bi-github"></i>
         </button>
       </div>
+      -->
     </div>
 
   </nav>
 </template>
 
 <script>
+import Logo from './Logo.vue';
 import NavbarLink from './NavbarLink.vue';
 import NavbarDivider from './NavbarDivider.vue';
 
 export default {
   components: {
+    Logo,
     NavbarLink,
     NavbarDivider,
   },
@@ -120,10 +127,9 @@ export default {
   font-family: "Jacquard 12 charted", system-ui;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.1rem;
+  font-size: 1.9rem;
   color: white;
   
-  margin-left:10px;
   margin-right:10px;
 }
 </style>

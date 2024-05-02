@@ -12,18 +12,20 @@
     :page="pages[activePage]"
   </page-viewer>
 -->
-    
+  <Footer/> 
 </template>
 
 
 <script>
 import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
 import PageViewer from './components/PageViewer.vue'
 //import BigScroll from './components/BigScroll.vue'
 
 export default {
   components: {
     Navbar,
+    Footer,
     PageViewer
   },
   methods: {

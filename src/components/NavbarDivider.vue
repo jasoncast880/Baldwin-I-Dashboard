@@ -1,15 +1,17 @@
 <template>
   <button>
-    <i class="`bi bi-${icon}`"></i>
+    <i :class="iconClass"></i>
   </button>
 </template>
 
 <script>
 export default {
   props: {
-    icon: {
-      type: String,
-      required: true
+    icon: String
+  },
+  computed: {
+    iconClass() {
+      return `bi ${this.icon}`;
     }
   },
   methods: {
@@ -23,9 +25,7 @@ export default {
 <style scoped>
 .button {
   border-radius: 10px;
-}
-.icon-style {
   height:75px;
-  width:auto;
+  width:100px;
 }
 </style>

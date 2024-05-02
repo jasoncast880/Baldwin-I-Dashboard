@@ -1,0 +1,93 @@
+<script>
+export default {
+  components: {
+  },
+  methods: {
+  },
+}
+
+</script>
+
+<template>
+  <div class="container libre-baskerville-bold">
+    <div class="box-1 center-div ">  
+      <i class="valid-icon bi bi-check-circle-fill" style="color:green"></i>
+      
+    </div>
+    <div class="box-2 center-div">
+      <div class="top-left-text">API Gateway Status:</div>
+      <div class="flex-row">
+        <div class="mr-4" style="margin-right=10px; height=80px;">
+          <i class="bi bi-alexa"></i>
+          <i class="bi bi-three-dots"></i>
+          <i class="bi bi-cloud-arrow-up-fill"></i>
+        </div>
+        <p> Alexa-Skill--Firebase Cloud Function: </p>
+        <i class="invalid-icon bi bi-check-circle-fill" style="color:green"></i>
+        Server Status: 400 | Last Updated 'POST' Request: 12:00:03 NPT
+      </div>
+      <div class="flex-row">
+        <div class="flex-column">
+          <div class="mr-4" style="margin-right=10px; height=80px;">
+            <i class="bi bi-cloud-arrow-up-fill"></i>
+            <i class="bi bi-three-dots"></i>
+            <i class="bi bi-server"></i>
+          </div>
+        </div>
+        <p> Firebase Cloud Function--Database: </p>
+        <i class="invalid-icon bi bi-x-circle-fill" style="color:red"></i>
+        Server Status: 400 | Last Updated 'POST' Request: 12:00:03 NPT
+      </div>
+    </div>
+    <div class="box-1 centre-div">
+    </div>
+    <div class="box-2 centre-div">
+    </div>
+    <div class="box-1 centre-div">
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.valid-icon {
+}
+.invalid-icon {
+}
+
+.container {
+  border-left: 2px solid rgb(187 187 187);
+  border-right: 2px solid rgb(187 187 187);
+}
+.box-1{
+  height:150px;
+  background-color: rgb(238 238 238);
+  position: relative;
+}
+.box-2{
+  height:150px;
+  position: relative;
+}
+
+.center-div {
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-row {
+  display:flex;
+  flex-direction:row;
+}
+.flex-column {
+  display:flex;
+  flex-direction:column;
+}
+
+.top-left-text{
+  position:absolute;
+  top:0;
+  left:0; 
+  margin:10px;
+}
+
+</style>
