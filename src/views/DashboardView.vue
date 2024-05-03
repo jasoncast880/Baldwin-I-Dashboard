@@ -14,12 +14,12 @@ export default {
     <div class="SERVICE-STATUS-BOX box-1 center-div ">  
       <div class="top-left-text">Alexa Service Status:</div>
       <div style="font-size:45px; margin-right: 20px;">
-        <i class="valid-icon bi bi-check-circle-fill" style="padding:5px; color:green;"></i> 
-        <i class="bi bi-dash-circle-fill" style="padding:5px; color:yellow"></i>
+        <i class="valid-icon bi bi-check-circle-fill" style="opacity:30%; padding:5px; color:green;"></i> 
+        <i class="bi bi-dash-circle-fill" style="opacity:30%; padding:5px; color:yellow"></i>
         <i class="bi bi-x-circle-fill" style="padding:5px; color:red"></i>
       </div>
       <span>
-        Baldwin I Is Under Maintenance At the Moment!
+        Baldwin I Is Currently Under Maintenance.
       </span>
     </div>
     
